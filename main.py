@@ -4,12 +4,14 @@ import glob
 import os.path
 
 def main():
-    # output dir setting
+    # input & output dir setting
+    input_dir_path = "./input"
     output_dir_path = "./output"
-    output_mkdirs(output_dir_path)
+    datas_mkdirs(input_dir_path)
+    datas_mkdirs(output_dir_path)
 
     # read npy
-    input_data_path = "./datas/*"
+    input_data_path = "./input/*"
     npy_files = glob.glob(input_data_path)
 
     # change npy to ply
@@ -19,7 +21,7 @@ def main():
         pcd.points = o3d.utility.Vector3dVector(npy_to_np)
         o3d.io.write_point_cloud(os.path.join(output_dir_path, str(index) + "_data.ply"), pcd)
 
-def output_mkdirs(path):
+def datas_mkdirs(path):
     if not os.path.isdir(path):
         os.makedirs(path)
 

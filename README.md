@@ -48,7 +48,7 @@ $ pip3 install open3d
 ---
 
 **Default Configuration** <br>
-input datas (npy) : [datas/] <br>
+input datas (npy) : [input/] <br>
 output datas (ply) : [output/] <br>
 
 Run the following command :
