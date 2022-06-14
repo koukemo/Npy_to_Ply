@@ -57,3 +57,10 @@ Run the following command :
 python3 main.py
 ```
 
+## Results
+
+---
+
+Example of the results of looking at the output data using meshlab.
+
+![meshlab_output](/results/meshlab_0_ply_sample.png)
